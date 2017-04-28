@@ -1,0 +1,178 @@
+@import url("normalize.css");
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url(../images/bg-body.png);
+    font-family: 'Raleway', sans-serif;
+    font-size: 10px;
+    margin: 0;
+}
+
+.banner{
+    display: none;
+}
+
+.container{
+    width: 95%;
+    margin: auto;
+}
+
+.logo{
+    display: block;
+    margin: 15px auto 30px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #000;
+}
+
+.toggle-nav{
+    display: block;
+    background-color: #222;
+    width: 40px;
+    margin: auto;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.toggle-nav span{
+    font-size: 2em;
+}
+
+.main-nav{
+    display: none;
+}
+
+.main-nav ul{
+    list-style: none; /*para sacar los puntitos*/
+    padding: 0; /*para sacar el padding con el q ya viene*/
+    margin: 30px 0; /*para sacar el margen, xq quiero q empiece en 0*/
+}
+
+.main-nav a{
+    display: block;
+    text-decoration: none;
+    font-size: 1.5em;
+    background-color: #333;
+    color: #fff;
+    padding: 20px 10px;
+    border-bottom: solid 1px #fff;
+    text-transform: uppercase;
+}
+
+.product{
+    margin: 30px 0;
+}
+
+.product img{
+    width: 100%;
+}
+
+.product h2{
+    font-size: 2.5em;
+}
+
+.product p{
+    font-size: 1.5em;
+}
+
+.product a{
+    background-color: #333;
+    padding: 15px 25px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.4em;
+    display: inline-block;
+}
+
+.main-footer{
+    background-color: rgb(186, 26, 5);
+}
+
+.main-footer ul{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.main-footer a{
+    display: block;
+    text-decoration: none;
+    font-size: 1.5em;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 15px 0;
+    border-bottom: solid 1px #fff;
+}
+
+@media (min-width:700px) {
+.container{
+    width: 100%;
+    max-width: 1200px;
+}
+
+.toggle-nav{
+    display: none;
+}
+
+/*aplicamos el display:block para mostrar nuevamente el elemento en pantalla - siempre q pongamos cualquier cosa que no sea display none se va a mostrar el elemento pero en este caso utilizamos el display:block */
+.main-nav{
+    display: block!important; /*hace que esta linea no se pueda pisar, hace que sea mas importante que las etiquetas por ejemplo que estan en el html tipo el "style" del jquery*/
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+
+.main-nav li{
+    float:left;
+    width: 15%;
+    margin: 0 0.83%;
+}
+.main-nav a{
+    font-size: 1.3em;
+    border-bottom: none;
+    text-align: center;
+  }
+.banner{
+    display: block; /* porque quiero q ocupe todo el ancho, ahi se usa el block*/
+    margin: 0 0.83%;
+}
+.banner img{
+    width: 100%;
+}
+.product{
+    margin-left: 0.83%;
+    margin-right: 0.83%;
+    width: 48.34%;
+    float: left;
+}
+.main-footer{
+    clear: both; /*o puedo poner vip-product{overflow: hidden} porq limpia flotacion de padres a hijos*/
+}
+}
+
+@media (min-width:1000px) {
+.product{
+    width: 31.66%;
+}
+.main-footer{
+    border-radius: 15px 15px 0 0;
+    margin-left: 0.83%;
+    margin-right: 0.83%;
+    text-align: center;
+    padding: 30px 0;
+}
+.main-footer li{
+    display: inline-block;
+}
+.main-footer a{
+  border-bottom: none;
+  padding: 15px;
+  border-left: solid 1px #fff;
+}
+.main-footer li:last-child a{
+  border-right: none;
+}
+}
